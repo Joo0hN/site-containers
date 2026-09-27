@@ -42,7 +42,7 @@ h1{font-size:clamp(38px,5vw,64px);line-height:1.02;letter-spacing:-2px;margin-bo
 .secondary:hover{background:rgba(255,255,255,.08)}
 .hero-image{height:390px;border-radius:24px;background:
 linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.5)),
-url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=85") center/cover;
+url("images/container-hero.jpeg") center/cover;
 box-shadow:0 25px 60px rgba(0,0,0,.28)}
 section{padding:78px 0}
 .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
@@ -53,9 +53,9 @@ h2{font-size:clamp(30px,4vw,42px);line-height:1.1;color:var(--navy);margin-botto
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .card-img{height:205px;background-size:cover;background-position:center}
-.img1{background-image:url("https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=900&q=80")}
-.img2{background-image:url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80")}
-.img3{background-image:url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d8?auto=format&fit=crop&w=900&q=80")}
+.img1{background-image:url("images/container-dry6.jpeg")}
+.img2{background-image:url("images/container-dry12.jpeg")}
+.img3{background-image:url("images/container-highcube-1.jpeg")}
 .card-body{padding:23px}
 .card h3{font-size:22px;color:var(--navy);margin-bottom:7px}
 .spec{color:var(--muted);font-size:14px;margin-bottom:16px}
@@ -69,11 +69,11 @@ h2{font-size:clamp(30px,4vw,42px);line-height:1.1;color:var(--navy);margin-botto
 .benefit p{font-size:14px;color:var(--muted)}
 .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px;gap:12px}
 .gallery div{border-radius:15px;background-size:cover;background-position:center}
-.g1{grid-row:span 2;background-image:url("https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1000&q=80")}
-.g2{background-image:url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80")}
-.g3{background-image:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80")}
-.g4{background-image:url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80")}
-.g5{background-image:url("https://images.unsplash.com/photo-1531835551805-16d864c8d513?auto=format&fit=crop&w=800&q=80")}
+.g1{grid-row:span 2;background-image:url("images/container-hero.jpeg")}
+.g2{background-image:url("images/container-highcube-1.jpeg")}
+.g3{background-image:url("images/container-interior.jpeg")}
+.g4{background-image:url("images/container-dry12.jpeg")}
+.g5{background-image:url("images/container-dry6.jpeg")}
 .process{background:var(--light)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .step{position:relative;padding:25px;background:#fff;border-radius:15px;border:1px solid var(--line)}
@@ -85,13 +85,20 @@ h2{font-size:clamp(30px,4vw,42px);line-height:1.1;color:var(--navy);margin-botto
 .contact h2{color:white}
 .contact p{color:#c8d8e5;margin-bottom:22px}
 .contact-list{display:grid;gap:10px;color:#dbe8f1}
+.contact-list a{font-weight:800}
+.contact-list a:hover{color:#8fd1ff}
 .form{background:white;padding:25px;border-radius:18px}
 .form input,.form select,.form textarea{width:100%;padding:13px 14px;border:1px solid #d8e0e7;border-radius:9px;margin-bottom:12px;font:inherit}
 .form textarea{min-height:95px;resize:vertical}
 .form button{width:100%;border:0;cursor:pointer;font:inherit}
 footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
 .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.float-wa{position:fixed;right:20px;bottom:20px;z-index:100;background:#20b958;color:#fff;padding:13px 17px;border-radius:999px;font-weight:900;box-shadow:0 8px 25px rgba(0,0,0,.25)}
+.wa-widget{position:fixed;right:20px;bottom:20px;z-index:100;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.float-wa{border:0;cursor:pointer;background:#20b958;color:#fff;padding:13px 17px;border-radius:999px;font-weight:900;font-size:15px;box-shadow:0 8px 25px rgba(0,0,0,.25)}
+.wa-options{display:flex;flex-direction:column;gap:8px;max-height:0;opacity:0;pointer-events:none;overflow:hidden;transition:max-height .25s ease,opacity .2s ease}
+.wa-widget.open .wa-options{max-height:160px;opacity:1;pointer-events:auto}
+.wa-options a{background:#fff;color:#0b1f33;font-weight:800;font-size:13px;padding:11px 15px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.18);white-space:nowrap;border:1px solid var(--line)}
+.wa-options a:hover{background:#eef9f1}
 @media(max-width:850px){
  .navlinks{display:none}.hero{padding:58px 0}.hero-grid,.contact-grid{grid-template-columns:1fr}
  .hero-image{height:300px}.cards{grid-template-columns:1fr}.benefits,.steps{grid-template-columns:1fr 1fr}
@@ -100,7 +107,7 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
 @media(max-width:520px){
  section{padding:58px 0}.benefits,.steps,.gallery{grid-template-columns:1fr}
  .g1,.g2{grid-column:auto}.gallery div{height:190px}.nav{height:66px}.logo{font-size:19px}
- h1{letter-spacing:-1px}.hero p{font-size:16px}.float-wa{right:12px;bottom:12px}
+ h1{letter-spacing:-1px}.hero p{font-size:16px}.wa-widget{right:12px;bottom:12px}
 }
 </style>
 </head>
@@ -124,7 +131,7 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
     <div>
       <span class="badge">CONTAINERS USADOS • VENDA E ENTREGA</span>
       <h1>Mais espaço para sua operação.</h1>
-      <p>Containers usados para armazenamento, obras, estoque, almoxarifado, ferramentas e equipamentos. Modelos de 6m e 12m com entrega em Goiás e outros estados.</p>
+      <p>Containers usados para armazenamento, estoque, obras, almoxarifado, ferramentas, equipamentos, empresas e outras finalidades. Modelos Dry 6m, Dry 12m e High Cube 12m, com entrega em todo Goiás e outros estados.</p>
       <div class="hero-actions">
         <a class="cta" href="#orcamento">📲 Solicitar orçamento</a>
         <a class="secondary" href="#containers">Ver modelos</a>
@@ -193,8 +200,8 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Galeria</div>
-      <h2>Veja alguns exemplos</h2>
-      <p>As imagens abaixo são demonstrativas. Na versão final, substitua por fotos reais dos containers disponíveis.</p>
+      <h2>Containers reais, prontos para entrega</h2>
+      <p>Fotos reais de unidades já vendidas e entregues. Solicite fotos atualizadas do container disponível no momento do seu pedido.</p>
     </div>
     <div class="gallery">
       <div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div>
@@ -225,9 +232,10 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
       <h2>Solicite seu orçamento</h2>
       <p>Preencha os dados ao lado e o site abrirá uma conversa no WhatsApp com as informações do seu pedido.</p>
       <div class="contact-list">
-        <div>📲 (62) 99136-8444</div>
-        <div>📲 (62) 99122-2088</div>
+        <a href="#" onclick="wa('Olá! Gostaria de fazer uma cotação de container.', PHONE1);return false;">📲 WhatsApp 1 — (62) 99136-8444</a>
+        <a href="#" onclick="wa('Olá! Gostaria de fazer uma cotação de container.', PHONE2);return false;">📲 WhatsApp 2 — (62) 99122-2088</a>
         <div>🚚 Entrega em Goiás e outros estados</div>
+        <div>Também avaliamos outras necessidades e realizamos cotações de containers sob medida — chame no WhatsApp.</div>
       </div>
     </div>
     <form class="form" onsubmit="sendForm(event)">
@@ -248,7 +256,13 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
 </section>
 </main>
 
-<a class="float-wa" href="#" onclick="wa('Olá! Vi o site e gostaria de receber informações sobre os containers disponíveis.');return false;">💬 WhatsApp</a>
+<div class="wa-widget" id="waMenu">
+  <div class="wa-options">
+    <a href="#" onclick="wa('Olá! Vi o site e gostaria de receber informações sobre os containers disponíveis.', PHONE1);return false;">📲 WhatsApp 1 — (62) 99136-8444</a>
+    <a href="#" onclick="wa('Olá! Vi o site e gostaria de receber informações sobre os containers disponíveis.', PHONE2);return false;">📲 WhatsApp 2 — (62) 99122-2088</a>
+  </div>
+  <button class="float-wa" onclick="toggleWaMenu()" aria-label="Abrir opções de WhatsApp">💬 WhatsApp</button>
+</div>
 
 <footer>
   <div class="container footer-row">
@@ -258,10 +272,12 @@ footer{background:#071724;color:#9db0bf;padding:28px 0;font-size:13px}
 </footer>
 
 <script>
-const PHONE = "5562991368444"; // Troque aqui se quiser usar outro WhatsApp
+const PHONE1 = "5562991368444"; // WhatsApp 1 — (62) 99136-8444
+const PHONE2 = "5562991222088"; // WhatsApp 2 — (62) 99122-2088
 
-function wa(message){
-  window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(message), "_blank");
+function wa(message, phone){
+  const number = phone || PHONE1;
+  window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(message), "_blank");
 }
 function sendForm(e){
   e.preventDefault();
@@ -271,7 +287,10 @@ function sendForm(e){
   const quantidade = document.getElementById("quantidade").value;
   const obs = document.getElementById("obs").value;
   const msg = `Olá! Vim pelo site e gostaria de fazer um orçamento.%0A%0ANome: ${nome}%0ACidade/UF: ${cidade}%0AModelo: ${modelo}%0AQuantidade: ${quantidade}%0AObservações: ${obs || "Não informado"}`;
-  window.open("https://wa.me/" + PHONE + "?text=" + msg, "_blank");
+  window.open("https://wa.me/" + PHONE1 + "?text=" + msg, "_blank");
+}
+function toggleWaMenu(){
+  document.getElementById("waMenu").classList.toggle("open");
 }
 </script>
 </body>
